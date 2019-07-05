@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <title>Gifts</title>
+  </head>
+  <body>
+    <div class="container" align="center">
+      <div class="header">
+        <div class="header-image">
+          <img class="header-logo" src="./images/logo.png" alt="Logo Image">
+        </div>
+        <ul class="header-nav" align="center">
+          <li><a href="/"><i class="fas fa-home" aria-hidden="true"></i>&nbsp&nbspHome</a></li>
+          <li><a href="/gift"><i class="fas fa-gift" aria-hidden="true"></i>&nbsp&nbspSend Gift</a></li>
+          {% if not logged %}
+          <li><a href="/login"><i class="fas fa-sign-in-alt"></i>&nbsp&nbspLogin</a></li>
+          {% else %}
+          <li><a href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp&nbspLogout</a></li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="content">
+        <h3>
+          Do you have something that is collecting dust and you want to donate? You are at right place!
+        </h3>
+        <br>
+        <div class="about">
+          <h1>About site</h3>
+          <h3>
+            Hello. If you are here, I assume that somebody recommended you this site to get rid of something that isn't useful to you, and you think that you'll make someone else happy. If it is like that, login and you can start sending gifts!
+          </h3>
+        </div>
+        <br>
+        {% if gifts %}
+          <h1>Sent gifts:</h1>
+          <h3>title: Desc</h3>
+          {% for gift in gifts %}
+          <h3>{% print gift %}</h3>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <div class="footer">
+        <label class="name">
+          Developed by Milan Vjestica
+        </label>
+        <br><br>
+        <label class="email">
+          Email: milanvjestica01@gmail.com
+        </label>
+      </div>
+    </div>
+  </body>
+</html>

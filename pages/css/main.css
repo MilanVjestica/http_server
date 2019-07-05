@@ -1,0 +1,79 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: url("../images/background.jpg");
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+}
+
+.container .header {
+  width: 100%;
+  background: #EC3A5C;
+}
+
+.container .header .header-image .header-logo {
+  height: 100px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 50px;
+}
+
+ul li a {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+ul li a:hover {
+  color: #cccccc;
+}
+
+.container .content {
+  width: 50%;
+  margin: 50px 0px;
+  background: #EC3A5C;
+  padding: 25px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  margin-bottom: 175px;
+}
+
+.container .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #EC3A5C;
+  color: #FFFFFF;
+  padding: 20px 0px;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s

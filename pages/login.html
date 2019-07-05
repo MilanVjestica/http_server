@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <title>Gifts</title>
+  </head>
+  <body>
+    <div class="container" align="center">
+      <div class="header">
+        <div class="header-image">
+          <img class="header-logo" src="./images/logo.png" alt="Logo Image">
+        </div>
+        <ul class="header-nav" align="center">
+          <li><a href="/"><i class="fas fa-home" aria-hidden="true"></i>&nbsp&nbspHome</a></li>
+          <li><a href="/gift"><i class="fas fa-gift" aria-hidden="true"></i>&nbsp&nbspSend Gift</a></li>
+          {% if not logged %}
+          <li><a href="/login"><i class="fas fa-sign-in-alt"></i>&nbsp&nbspLogin</a></li>
+          {% else %}
+          <li><a href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp&nbspLogout</a></li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="content">
+        {% if not logged %}
+          <form action="/login" method="POST" enctype="multipart/form-data">
+              Login:
+              <br><br>
+              {% if error %}
+              <label>{% print error %}</label>
+              <br><br>
+              {% endif %}
+              <input type="text" name="username" placeholder="Username">
+              <br><br>
+              <input type="password" name="password" placeholder="Password">
+              <br><br>
+              <input type="submit" name="submit" value="Login">
+          </form>
+          <br><br><br><br>
+          <form action="/register" method="POST" enctype="multipart/form-data">
+              Register:
+              <br><br>
+              <input type="text" name="username" placeholder="Username">
+              <br><br>
+              <input type="password" name="password" placeholder="Password">
+              <br><br>
+              <input type="submit" name="submit" value="Register">
+          </form>
+        {% else %}
+          <h3>You are already logged in.</h3>
+        {% endif %}
+      </div>
+      <div class="footer">
+        <label class="name">
+          Developed by Milan Vjestica
+        </label>
+        <br><br>
+        <label class="email">
+          Email: milanvjestica01@gmail.com
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
