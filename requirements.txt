@@ -5,7 +5,7 @@ cssselect==1.0.3
 fake-useragent==0.1.11
 idna==2.8
 Jinja2==2.10.1
-lxml==4.3.4
+lxml==4.6.2
 MarkupSafe==1.1.1
 mysql-connector==2.2.9
 pyee==6.0.0
